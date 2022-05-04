@@ -1,3 +1,10 @@
+/**
+ * @author Andrej Bartulin
+ * PROJECT: 3x
+ * LICENSE: Public Domain
+ * DESCRIPTION: Main file
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
