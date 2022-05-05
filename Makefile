@@ -13,3 +13,6 @@ $(BIN) : $(OBJS)
 
 clean:
 	rm -rf main main.o
+
+python:
+	python3 main.py
