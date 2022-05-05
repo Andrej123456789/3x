@@ -2,7 +2,7 @@
  * @author Andrej Bartulin
  * PROJECT: 3x
  * LICENSE: Public Domain
- * DESCRIPTION: Main file
+ * DESCRIPTION: Main file for C version
 */
 
 #include <stdio.h>
@@ -27,7 +27,7 @@ int main(int argc, char **argv)
         printf("Argument error!\nEnter mode (1 - without max number, 2 - which max number): ");
         scanf("%d", &mode);
 
-        printf("Argument error!\nEnter number: ");
+        printf("Enter number: ");
         scanf("%"SCNu64"", &n);
         printf("Starter number: \t%"PRId64"\t\n", n);
     }
@@ -99,6 +99,12 @@ int main(int argc, char **argv)
         }
 
         printf("We come to the loop. Number n at start was: %"PRId64", now is: %"PRId64". Max is: %"PRId64".\n", starter, n, max);
+    }
+
+    else
+    {
+        printf("Wrong mode %d! Exiting with value 1...", mode);
+        return 1;
     }
     
     return 0;
