@@ -8,9 +8,9 @@ DESCRIPTION: Main file for Python version
 import sys
 
 def main(mode: int, n: int) -> int:
-    previous = 0;
-    max = n;
-    starter = n;
+    previous = 0
+    max = n
+    starter = n
 
     if mode == 1:
         while 1:
@@ -18,11 +18,12 @@ def main(mode: int, n: int) -> int:
                 break
             
             if n % 2 == 0:
-                n = n / 2
+                n /= 2
                 print(n)
 
             else:
-                n = n * 3 + 1
+                n *= 3
+                n +=1
                 print(n)
 
         print(f"We come to the loop. Number n at start was {starter}, now is: {n}.")
@@ -33,11 +34,12 @@ def main(mode: int, n: int) -> int:
                 break
 
             if n % 2 == 0:
-                n = n / 2
+                n /= 2
                 print(n)
 
             else:
-                n = n * 3 + 1
+                n *= 3
+                n +=1
                 print(n)
 
             if n > max:

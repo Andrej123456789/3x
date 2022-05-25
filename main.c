@@ -55,13 +55,14 @@ int main(int argc, char **argv)
 
             if (n % 2 == 0)
             {
-                n = n / 2;
+                n /= 2;
                 print
             }
 
             else
             {
-                n = n * 3 + 1;
+                n *= 3;
+                n++;
                 print
             }
         }
@@ -80,13 +81,14 @@ int main(int argc, char **argv)
 
             if (n % 2 == 0)
             {
-                n = n / 2;
+                n /= 2;
                 print
             }
 
             else
             {
-                n = n * 3 + 1;
+                n *= 3;
+                n++;
                 print
             }
 
