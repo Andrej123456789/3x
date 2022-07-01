@@ -26,7 +26,7 @@ def main(mode: int, n: int) -> int:
                 n +=1
                 print(n)
 
-        print(f"We come to the loop. Number n at start was {starter}, now is: {n}.")
+        print(f"We came to the loop. Number n at start was {starter}, now is: {n}.")
 
     elif mode == 2:
         while 1:
@@ -47,7 +47,7 @@ def main(mode: int, n: int) -> int:
                 
             previous = n
 
-        print(f"We come to the loop. Number n at start was: {starter}, now is: {n}. Max is: {max}.")
+        print(f"We came to the loop. Number n at start was: {starter}, now is: {n}. Max is: {max}.")
 
     else:
         print(f"Wrong mode {mode}! Exiting with value 1...")

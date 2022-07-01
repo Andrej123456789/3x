@@ -15,10 +15,10 @@ int main(int argc, char **argv)
 {
     int mode = 1;
 
-    uint64_t previous = 0;
-    static uint64_t max = 0;
-    static uint64_t starter = 0;
-    uint64_t n = 0;
+    int64_t previous = 0;
+    static int64_t max = 0;
+    static int64_t starter = 0;
+    int64_t n = 0;
 
     #define print printf("%"PRId64"\n", n);
 
@@ -28,7 +28,7 @@ int main(int argc, char **argv)
         scanf("%d", &mode);
 
         printf("Enter number: ");
-        scanf("%"SCNu64"", &n);
+        scanf("%"PRId64"", &n);
         printf("Starter number: \t%"PRId64"\t\n", n);
     }
 
@@ -42,7 +42,7 @@ int main(int argc, char **argv)
     max = n;
     starter = n;
 
-    printf("I put this previous variable here because I need to use it. %"PRId64".\n", previous);
+    printf("I need to use variable. %"PRId64".\n", previous);
 
     if (mode == 1)
     {
@@ -67,7 +67,7 @@ int main(int argc, char **argv)
             }
         }
 
-        printf("We come to the loop. Number n at start was: %"PRId64", now is: %"PRId64".\n", starter, n);
+        printf("We came to the loop. Number n at start was: %"PRId64", now is: %"PRId64".\n", starter, n);
     }
 
     else if (mode == 2)
@@ -100,7 +100,7 @@ int main(int argc, char **argv)
             previous = n;
         }
 
-        printf("We come to the loop. Number n at start was: %"PRId64", now is: %"PRId64". Max is: %"PRId64".\n", starter, n, max);
+        printf("We came to the loop. Number n at start was: %"PRId64", now is: %"PRId64". Max is: %"PRId64".\n", starter, n, max);
     }
 
     else
