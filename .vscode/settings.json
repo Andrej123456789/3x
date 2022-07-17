@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "helper.h": "c",
+        "gmp.h": "c",
+        "random": "c",
+        "limits": "c",
+        "semaphore": "c",
+        "valarray": "c",
+        "algorithm": "c"
+    }
+}

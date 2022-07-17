@@ -1,14 +1,14 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -pedantic -g
-OBJS = main.o
-BIN = main
+CFLAGS = -Wall -Wextra -Werror -pedantic -g -lgmp
+OBJS = executable/main.o
+BIN = executable/main
 
 all : $(BIN)
 
 $(BIN) : $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(BIN)
 
-%.o : %.c
+executable/%.o : %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

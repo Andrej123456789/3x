@@ -18,7 +18,7 @@ def main(mode: int, n: int) -> int:
                 break
             
             if n % 2 == 0:
-                n /= 2
+                n //= 2
                 print(n)
 
             else:
@@ -34,7 +34,7 @@ def main(mode: int, n: int) -> int:
                 break
 
             if n % 2 == 0:
-                n /= 2
+                n //= 2
                 print(n)
 
             else:
