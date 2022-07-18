@@ -6,3 +6,8 @@ Public Domain
 
 ## Stuff to download
 - GNU GMP library (for C version)
+
+## Resources used
+- [GMP tutorial](https://home.cs.colorado.edu/~srirams/courses/csci2824-spr14/gmpTutorial.html)
+- [`Integer-Comparisons` GNU GMP documentation](https://gmplib.org/manual/Integer-Comparisons)
+- [`Integer-Division` GNU GMP documentation](https://gmplib.org/manual/Integer-Division)
