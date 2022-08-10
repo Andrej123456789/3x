@@ -4,6 +4,12 @@ C/Python program design to play with this [math problem](https://www.youtube.com
 
 Public Domain
 
+## Stuff in folders/directories
+- `"root"` - main files located here, Makefile, README.md and few folders listed down below
+- `executable` - executables
+- `util` - files which can generate very large numbers, larger number you type as argument, larger number you get
+- `visualizer` - ascii visualizer of "main" output
+
 ## Stuff to download
 - GNU GMP library (for C version)
 

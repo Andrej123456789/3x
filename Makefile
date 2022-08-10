@@ -12,7 +12,7 @@ executable/%.o : %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -rf main main.o
+	rm -rf executable/*
 
 python:
 	python3 main.py
