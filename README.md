@@ -4,7 +4,7 @@ C/Python program design to play with this [math problem](https://www.youtube.com
 
 Public Domain
 
-[Visualizer](https://github.com/Andrej123456789/3x-visualizer) written using Tauri
+[Visualizer (archived)](https://github.com/Andrej123456789/Archive/tree/main/3x-visualizer) written using Tauri
 
 ## Stuff in folders/directories
 - `"root"` - main files located here, Makefile, README.md and few folders listed down below
