@@ -8,13 +8,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
 #include <assert.h>
+#include <inttypes.h>
+
 #include "gmp.h"
 
 int main(int argc, const char *argv[])
 {
-    int mode;
+    uint8_t mode;
 
+    /* ------------------------------------------ */
+    /*              Check arguments               */
+    /* ------------------------------------------ */
     if (argc != 3)
     {
         printf("Usage: %s <mode> <number>\n", argv[0]);
@@ -30,100 +36,79 @@ int main(int argc, const char *argv[])
         mpz_t is the type defined for GMP integers.
         It is a pointer to the internals of the GMP integer data structure
     */
-    mpz_t n, previous, max;
+    mpz_t n, start, max;
     int flag;
 
-    /* Initialize the number */
+    /* ------------------------------------------ */
+    /*          Initialize the numbers            */
+    /* ------------------------------------------ */
+
     mpz_init(n);
-    mpz_set_ui(n,0);
+    mpz_init(start);
+    mpz_init(max);
 
-    /* Parse the input string as a base 10 number */
+    /* ------------------------------------------ */
+    /*         Assign values to the numbers       */
+    /* ------------------------------------------ */
+
     flag = mpz_set_str(n, argv[2], 10);
-    assert (flag == 0); /* If flag is not 0 then the operation failed */
+    assert (flag == 0); // If flag is not 0 then the operation failed
 
-    flag = mpz_set_str(previous, "0", 10);
-    assert (flag == 0); /* If flag is not 0 then the operation failed */
+    flag = mpz_set_str(start, argv[2], 10);
+    assert (flag == 0); // If flag is not 0 then the operation failed
 
     flag = mpz_set_str(max, argv[2], 10);
-    assert (flag == 0); /* If flag is not 0 then the operation failed */
+    assert (flag == 0); // If flag is not 0 then the operation failed
 
-    if (mode == 1)
+    /* ------------------------------------------ */
+    /*                Main loop                   */
+    /* ------------------------------------------ */
+
+    while (1)
     {
-        while (1)
+        if (mpz_cmp_si(n, 0) == 0 || mpz_cmp_si(n, 1) == 0)
         {
-            if (mpz_cmp_d(n, (double)1) == 0)
-            {
-                break;
-            }
-
-            if (mpz_divisible_ui_p(n, (unsigned long)2) != 0)
-            {
-                mpz_div_ui(n, n, 2);
-                mpz_out_str(stdout, 10, n); 
-                printf("\n");
-            }
-
-            else
-            {
-                mpz_mul_ui(n, n, 3);
-                mpz_add_ui(n, n, 1);
-                mpz_out_str(stdout, 10, n);
-                printf("\n");
-            }
+            break;
         }
 
-        printf("We came to the loop! Number n at start was: %s, now is: ", argv[1]);
-        mpz_out_str(stdout, 10, n); 
-        printf(".\n");
-    }
-
-    else if (mode == 2)
-    {
-        while (1)
+        if (mpz_divisible_ui_p(n, (unsigned long)2) != 0)
         {
-            if (mpz_cmp_d(n, (double)1) == 0)
-            {
-                break;
-            }
+            mpz_div_ui(n, n, 2);
+            mpz_out_str(stdout, 10, n);
+            printf("\n");
+        }
 
-            if (mpz_divisible_ui_p(n, (unsigned long)2) != 0)
-            {
-                mpz_div_ui(n, n, 2);
-                mpz_out_str(stdout, 10, n);
-                printf("\n");
-            }
+        else
+        {
+            mpz_mul_ui(n, n, 3);
+            mpz_add_ui(n, n, 1);
+            mpz_out_str(stdout, 10, n);
+            printf("\n");
+        }
 
-            else
-            {
-                mpz_mul_ui(n, n, 3);
-                mpz_add_ui(n, n, 1);
-                mpz_out_str(stdout, 10, n);
-                printf("\n");
-            }
-
+        if (mode == 2)
+        {
             if (mpz_cmp(n, max) > 0)
             {
                 mpz_set(max, n);
             }
-
-            mpz_set(previous, n);
         }
-        
-        printf("We came to the loop! Number n at start was: %s, now is: ", argv[1]);
-        mpz_out_str(stdout, 10, n);
-        printf(". Max is: ");
-        mpz_out_str(stdout, 10, max);
-        printf(".\n");
     }
 
-    else
-    {
-        printf("Invalid mode\n");
-        return 0;
-    }
+    /* ------------------------------------------ */
+    /*              Print the results             */
+    /* ------------------------------------------ */
 
-    /* Clean up the mpz_t handles or else we will leak memory */
+    printf("We came to the loop!\n");
+    gmp_printf("Start: '%Zd', end: '%Zd', max: '%Zd'.\n", start, n, max);
+
+    /* ------------------------------------------ */
+    /*              Free the numbers              */
+    /* ------------------------------------------ */
+
     mpz_clear(n);
+    mpz_clear(start);
+    mpz_clear(max);
 
     return 0;
 }

@@ -6,6 +6,8 @@
         "limits": "c",
         "semaphore": "c",
         "valarray": "c",
-        "algorithm": "c"
+        "algorithm": "c",
+        "stdio.h": "c",
+        "stdlib.h": "c"
     }
 }

@@ -8,58 +8,35 @@ DESCRIPTION: Main file for Python version
 import sys
 
 def main(mode: int, n: int) -> int:
-    previous = 0
+    start = n
     max = n
-    starter = n
 
-    if mode == 1:
-        while 1:
-            if n == 1:
-                break
-            
-            if n % 2 == 0:
-                n //= 2
-                print(n)
+    while 1:
+        if n == 0 or n == 1:
+            break
+        
+        if n % 2 == 0:
+            n //= 2
+            print(n)
 
-            else:
-                n *= 3
-                n +=1
-                print(n)
+        else:
+            n *= 3
+            n +=1
+            print(n)
 
-        print(f"We came to the loop. Number n at start was {starter}, now is: {n}.")
-
-    elif mode == 2:
-        while 1:
-            if n == 1:
-                break
-
-            if n % 2 == 0:
-                n //= 2
-                print(n)
-
-            else:
-                n *= 3
-                n +=1
-                print(n)
-
+        if mode == 2:
             if n > max:
                 max = n
-                
-            previous = n
 
-        print(f"We came to the loop. Number n at start was: {starter}, now is: {n}. Max is: {max}.")
-
-    else:
-        print(f"Wrong mode {mode}! Exiting with value 1...")
-        return 1
+    print("We came to the loop!")
+    print(f"Start: {start}, end: {n}, max: {max}.")
 
     return 0
 
 if __name__ == "__main__":
     if not len(sys.argv) == 3:
-        print("Argument error")
-        mode = int(input("Enter mode: "))
-        number = int(input("Enter mode: "))
+        mode = int(input("Enter a mode: "))
+        number = int(input("Enter a number: "))
 
         main(mode, number)
 
