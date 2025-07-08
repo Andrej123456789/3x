@@ -1,7 +1,7 @@
 /**
  * @author Andrej Bartulin
  * PROJECT: 3x
- * LICENSE: Public Domain
+ * LICENSE: GPL-2.0 license
  * DESCRIPTION: Main file for C version
 */
 
