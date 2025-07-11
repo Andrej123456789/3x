@@ -4,6 +4,8 @@ C/Python program design to play with this [math problem](https://www.youtube.com
 
 GPL-2.0 license
 
+[v1.0.0](https://github.com/Andrej123456789/3x/releases/tag/v1.0.0)
+
 ## Stuff to download
 - GNU GMP library (for C version)
 
