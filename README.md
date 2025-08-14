@@ -6,10 +6,12 @@ GPL-2.0 license
 
 [v1.0.0](https://github.com/Andrej123456789/3x/releases/tag/v1.0.0)
 
+[v2.0.0](https://github.com/Andrej123456789/3x/releases/tag/v2.0.0)
+
 ## Stuff to download
 - GNU GMP library (for C version)
 
-**Notice for Windows users! Install GMP using vcpkg, x64 static version. Run cmake with following argument: `-DGMP_ROOT="path_to_vcpkg/installed/x64-windows-static"`.**
+**Notice for Windows users! Install GMP using vcpkg, x64 static version. Run CMake with the following argument: `-DGMP_ROOT="path_to_vcpkg/installed/x64-windows-static"`.**
 
 ## Resources used
 - [GMP tutorial](https://home.cs.colorado.edu/~srirams/courses/csci2824-spr14/gmpTutorial.html)
