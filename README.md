@@ -9,6 +9,8 @@ GPL-2.0 license
 ## Stuff to download
 - GNU GMP library (for C version)
 
+**Notice for Windows users! Install GMP using vcpkg, x64 static version. Run cmake with following argument: `-DGMP_ROOT="path_to_vcpkg/installed/x64-windows-static"`.**
+
 ## Resources used
 - [GMP tutorial](https://home.cs.colorado.edu/~srirams/courses/csci2824-spr14/gmpTutorial.html)
 - [`Integer-Comparisons` GNU GMP documentation](https://gmplib.org/manual/Integer-Comparisons)

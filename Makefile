@@ -1,12 +1,18 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -pedantic -g -lgmp
-OBJS = executable/main.o
-BIN = executable/main
+CFLAGS = -Wall -Wextra -Werror -pedantic -g
+LDFLAGS = -lgmp
 
-all : $(BIN)
+BIN_FOLDER = executable
+OBJS = $(BIN_FOLDER)/main.o
+BIN = $(BIN_FOLDER)/main
+
+all : $(BIN_FOLDER) $(BIN)
+
+$(BIN_FOLDER):
+	mkdir executable
 
 $(BIN) : $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(BIN)
+	$(CC) $(OBJS) -o $(BIN) $(LDFLAGS)
 
 executable/%.o : %.c
 	$(CC) $(CFLAGS) -c $< -o $@
