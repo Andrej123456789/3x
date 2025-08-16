@@ -8,6 +8,8 @@ GPL-2.0 license
 
 [v2.0.0](https://github.com/Andrej123456789/3x/releases/tag/v2.0.0)
 
+[v3.0.0](https://github.com/Andrej123456789/3x/releases/tag/v2.0.0)
+
 ## Stuff to download
 - GNU GMP library (for C version)
 
