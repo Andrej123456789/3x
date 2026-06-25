@@ -1,2 +1,4 @@
-executable/*
+.vscode/*
 build/*
+executable/*
+objects/*
