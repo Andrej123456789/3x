@@ -2,7 +2,10 @@
 
 C/Python program design to play with this [math problem](https://www.youtube.com/watch?v=094y1Z2wpJg)
 
-The Collatz conjecture (also known as 3x+1) is the hypothesis that repeatedly applying the rule “if a number is even divide it by 2, if it’s odd multiply by 3 and add 1” will eventually reach 1 for every positive integer.
+The Collatz conjecture (also known as 3x+1) states that any positive integer will eventually reach 1 if you repeatedly apply:
+
+- if even → divide by 2
+- if odd → multiply by 3 and add 1.
 
 [v1.0.0](https://github.com/Andrej123456789/3x/releases/tag/v1.0.0)
 
