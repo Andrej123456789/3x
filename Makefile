@@ -2,23 +2,28 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror -pedantic -g
 LDFLAGS = -lgmp
 
-BIN_FOLDER = executable
-OBJS = $(BIN_FOLDER)/main.o
-BIN = $(BIN_FOLDER)/main
+OBJDIR = objects
+OBJS = $(addprefix $(OBJDIR)/, $(patsubst %.c, %.o, $(wildcard *.c)))
 
-all : $(BIN_FOLDER) $(BIN)
+BINFOLDER = executable
+BIN = $(BINFOLDER)/3x
 
-$(BIN_FOLDER):
-	mkdir executable
+all : $(OBJDIR) $(BINFOLDER) $(BIN)
+
+$(OBJDIR):
+	mkdir $(OBJDIR)
+
+$(BINFOLDER):
+	mkdir $(BINFOLDER)
 
 $(BIN) : $(OBJS)
 	$(CC) $(OBJS) -o $(BIN) $(LDFLAGS)
 
-executable/%.o : %.c
+$(OBJDIR)/%.o : %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-clean:
-	rm -rf executable/*
+run:
+	@./$(BIN)
 
-python:
-	python3 main.py
+clean:
+	rm -rf $(OBJDIR) $(BINFOLDER)
