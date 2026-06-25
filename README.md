@@ -40,7 +40,7 @@ The Collatz conjecture (also known as 3x+1) states that any positive integer wil
 | 5       | Open Visual Studio and build the solution                      |                                                   |
 | 6       | Run the program located inside the `Debug` or `Release` folder | `.\Debug\3x.exe` or `.\Release\3x.exe`            |
 
-**Notice! In order to not use Visual Studio (you still need to have it installed), you can use nmake. Run CMake with the following command: `cmake -G "NMake Makefiles" -DCMAKE_C_COMPILER=cl -DCMAKE_CXX_COMPILER=cl -DGMP_ROOT="path_to_vcpkg" ..`. To compile the project use command `nmake`. You need to be inside *Developer Command Prompt* or *Developer Powershell*.****
+**Notice! In order to not use Visual Studio (you still need to have it installed), you can use nmake. Run CMake with the following command: `cmake -G "NMake Makefiles" -DCMAKE_C_COMPILER=cl -DCMAKE_CXX_COMPILER=cl -DGMP_ROOT="path_to_vcpkg" ..`. To compile the project use command `nmake`. You need to be inside _Developer Command Prompt_ or _Developer Powershell_.**
 
 ### Linux
 
