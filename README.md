@@ -7,6 +7,8 @@ The Collatz conjecture (also known as 3x+1) states that any positive integer wil
 - if even → divide by 2
 - if odd → multiply by 3 and add 1.
 
+[Latest release - v4.0.0](https://github.com/Andrej123456789/3x/releases/tag/v4.0.0)
+
 ## Compile - C version
 
 ## Installing dependencies
