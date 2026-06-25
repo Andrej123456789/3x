@@ -7,8 +7,6 @@ The Collatz conjecture (also known as 3x+1) states that any positive integer wil
 - if even → divide by 2
 - if odd → multiply by 3 and add 1.
 
-[Latest release - v4.0.0](https://github.com/Andrej123456789/3x/releases/tag/v4.0.0)
-
 ## Compile - C version
 
 ## Installing dependencies
@@ -24,10 +22,10 @@ The Collatz conjecture (also known as 3x+1) states that any positive integer wil
 
 | Package: | Command:                                                                                                                      |
 | -------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| Git      | <table><tr><th>Debian</th><th>Arch Linux</th></tr><td>`apt-get install git`</td><td>`pacman -S git`</td></tr></table>         |
-| Make     | <table><tr><th>Debian</th><th>Arch Linux</th></tr><td>`apt-get install make`</td><td>`pacman -S make`</td></tr></table>       |
-| GCC      | <table><tr><th>Debian</th><th>Arch Linux</th></tr><td>`apt-get install gcc`</td><td>`pacman -S gcc`</td></tr></table>         |
-| GMP      | <table><tr><th>Debian</th><th>Arch Linux</th></tr><td>`apt-get install libgmp3-dev`</td><td>`pacman -S gmp`</td></tr></table> |
+| git      | <table><tr><th>Debian</th><th>Arch Linux</th></tr><td>`apt-get install git`</td><td>`pacman -S git`</td></tr></table>         |
+| make     | <table><tr><th>Debian</th><th>Arch Linux</th></tr><td>`apt-get install make`</td><td>`pacman -S make`</td></tr></table>       |
+| gcc      | <table><tr><th>Debian</th><th>Arch Linux</th></tr><td>`apt-get install gcc`</td><td>`pacman -S gcc`</td></tr></table>         |
+| gmp      | <table><tr><th>Debian</th><th>Arch Linux</th></tr><td>`apt-get install libgmp3-dev`</td><td>`pacman -S gmp`</td></tr></table> |
 
 ## Compiling & running
 
@@ -66,8 +64,8 @@ The Collatz conjecture (also known as 3x+1) states that any positive integer wil
 
 | Package: | Command:                                                                                                                     |
 | -------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| Git      | <table><tr><th>Debian</th><th>Arch Linux</th></tr><td>`apt-get install git`</td><td>`pacman -S git`</td></tr></table>        |
-| Python   | <table><tr><th>Debian</th><th>Arch Linux</th></tr><td>`apt-get install python3`</td><td>`pacman -S python`</td></tr></table> |
+| git      | <table><tr><th>Debian</th><th>Arch Linux</th></tr><td>`apt-get install git`</td><td>`pacman -S git`</td></tr></table>        |
+| python   | <table><tr><th>Debian</th><th>Arch Linux</th></tr><td>`apt-get install python3`</td><td>`pacman -S python`</td></tr></table> |
 
 ## Running
 
