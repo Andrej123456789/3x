@@ -36,7 +36,6 @@ int main(int argc, const char *argv[])
         It is a pointer to the internals of the GMP integer data structure
     */
     mpz_t n, start, max;
-    int flag;
 
     /* ------------------------------------------ */
     /*          Initialize the numbers            */
@@ -50,9 +49,9 @@ int main(int argc, const char *argv[])
     /*         Assign values to the numbers       */
     /* ------------------------------------------ */
 
-    flag = mpz_set_str(n, argv[2], 10);
-    flag = mpz_set_str(start, argv[2], 10);
-    flag = mpz_set_str(max, argv[2], 10);
+    mpz_set_str(n, argv[2], 10);
+    mpz_set_str(start, argv[2], 10);
+    mpz_set_str(max, argv[2], 10);
 
     /* ------------------------------------------ */
     /*                Main loop                   */
