@@ -9,7 +9,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include <assert.h>
 #include <inttypes.h>
 
 #include "gmp.h"
@@ -29,7 +28,7 @@ int main(int argc, const char *argv[])
 
     else
     {
-        mode = atoi(argv[1]);
+        mode = (uint8_t)atoi(argv[1]);
     }
 
     /*
@@ -52,13 +51,8 @@ int main(int argc, const char *argv[])
     /* ------------------------------------------ */
 
     flag = mpz_set_str(n, argv[2], 10);
-    assert (flag == 0); // If flag is not 0 then the operation failed
-
     flag = mpz_set_str(start, argv[2], 10);
-    assert (flag == 0); // If flag is not 0 then the operation failed
-
     flag = mpz_set_str(max, argv[2], 10);
-    assert (flag == 0); // If flag is not 0 then the operation failed
 
     /* ------------------------------------------ */
     /*                Main loop                   */

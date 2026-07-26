@@ -1,13 +1,13 @@
-cmake_minimum_required(VERSION 3.21)
+cmake_minimum_required(VERSION 4.1)
 
 set(CMAKE_BUILD_TYPE Release)
 
 project(3x)
 
-IF (WIN32)
-    set(CMAKE_C_FLAGS "/Zi")
+IF (MSVC)
+    set(CMAKE_C_FLAGS "/W4 /permissive-")
 ELSE()
-    set(CMAKE_C_FLAGS "-Wall -Wextra -Werror -pedantic -g")
+    set(CMAKE_C_FLAGS "-Wall -Wextra -Werror -pedantic")
 ENDIF()
 
 file(GLOB SRC CONFIGURE_DEPENDS "main.c")
