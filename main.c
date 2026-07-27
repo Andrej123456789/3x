@@ -28,7 +28,7 @@ int main(int argc, const char *argv[])
 
     else
     {
-        mode = (uint8_t)atoi(argv[1]);
+        mode = atoi(argv[1]);
     }
 
     /*
