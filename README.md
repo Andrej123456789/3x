@@ -33,18 +33,42 @@ The Collatz conjecture (also known as 3x+1) states that any positive integer wil
 
 ### Windows
 
+<details>
+<summary>CMake</summary>
+
 | Number: | Step:                                                          | Command:                                          |
 | ------- | -------------------------------------------------------------- | ------------------------------------------------- |
 | 1       | Clone a repository                                             | `git clone https://github.com/Andrej123456789/3x` |
-| 2       | Enter the `src` directory                                      | `cd 3x\src`                                       |
-| 3       | Create the `build` directory and enter it                      | `mkdir build && cd build`                         |
-| 4       | Run CMake                                                      | `cmake .. -DGMP_ROOT="path_to_vcpkg"`             |
-| 5       | Open Visual Studio and build the solution                      |                                                   |
-| 6       | Run the program located inside the `Debug` or `Release` folder | `.\Debug\3x.exe` or `.\Release\3x.exe`            |
+| 2       | Enter the `src` folder                                         | `cd 3x\src`                                       |
+| 3       | Create the `build` folder                                      | `mkdir build`                                     |
+| 4       | Enter the `build` folder                                       | `cd build`                                        |
+| 5       | Run CMake                                                      | `cmake .. -DGMP_ROOT="path_to_vcpkg"`             |
+| 6       | Open Visual Studio and build the solution                      |                                                   |
+| 7       | Run the program located inside the `Debug` or `Release` folder | `.\Debug\3x.exe` or `.\Release\3x.exe`            |
 
-**Notice! In order to not use Visual Studio (you still need to have it installed), you can use nmake. Run CMake with the following command: `cmake -G "NMake Makefiles" -DCMAKE_C_COMPILER=cl -DCMAKE_CXX_COMPILER=cl -DGMP_ROOT="path_to_vcpkg" ..`. To compile the project use command `nmake`. You need to be inside _Developer Command Prompt_ or _Developer Powershell_.**
+</details>
+
+<details>
+<summary>CMake without Visual Studio</summary>
+
+**Notice! You still need to have Visual Studio with C/C++ development extension installed. Run following commands inside _Developer Command Prompt_ or _Developer Powershell_.**
+
+| Number: | Step:                     | Command:                                                                                                 |
+| ------- | ------------------------- | -------------------------------------------------------------------------------------------------------- |
+| 1       | Clone a repository        | `git clone https://github.com/Andrej123456789/3x`                                                        |
+| 2       | Enter the `src` folder    | `cd 3x\src`                                                                                              |
+| 3       | Create the `build` folder | `mkdir build`                                                                                            |
+| 4       | Enter the `build` folder  | `cd build`                                                                                               |
+| 5       | Run CMake                 | `cmake -G "NMake Makefiles" -DCMAKE_C_COMPILER=cl -DCMAKE_CXX_COMPILER=cl -DGMP_ROOT="path_to_vcpkg" ..` |
+| 6       | Compile                   | `nmake`                                                                                                  |
+| 7       | Run the program           | `.\3x.exe`                                                                                               |
+
+</details>
 
 ### Linux
+
+<details>
+<summary>Make</summary>
 
 | Number: | Step:                     | Command:                                          |
 | ------- | ------------------------- | ------------------------------------------------- |
@@ -52,6 +76,23 @@ The Collatz conjecture (also known as 3x+1) states that any positive integer wil
 | 2       | Enter the `src` directory | `cd 3x/src`                                       |
 | 3       | Compile                   | `make`                                            |
 | 4       | Run the program           | `make run`                                        |
+
+</details>
+
+<details>
+<summary>CMake</summary>
+
+| Number: | Step:                        | Command:                                          |
+| ------- | ---------------------------- | ------------------------------------------------- |
+| 1       | Clone a repository           | `git clone https://github.com/Andrej123456789/3x` |
+| 2       | Enter the `src` directory    | `cd 3x/src`                                       |
+| 3       | Create the `build` directory | `mkdir build`                                     |
+| 4       | Enter the `build` directory  | `cd build`                                        |
+| 5       | Run CMake                    | `cmake ..`                                        |
+| 6       | Compile                      | `make`                                            |
+| 7       | Run the program              | `./3x`                                            |
+
+</details>
 
 ## Build & run instructions - Python version
 
