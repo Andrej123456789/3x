@@ -1,5 +1,5 @@
-build/*
-executable/*
-objects/*
+**/src/executable/
+**/src/objects/
+**/src/build/
 
 .vscode/*

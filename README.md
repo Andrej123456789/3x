@@ -9,7 +9,7 @@ The Collatz conjecture (also known as 3x+1) states that any positive integer wil
 
 [Latest release - v5.0.0](https://github.com/Andrej123456789/3x/releases/tag/v5.0.0)
 
-## Compile - C version
+## Build & run instructions - C version
 
 ## Installing dependencies
 
@@ -36,7 +36,7 @@ The Collatz conjecture (also known as 3x+1) states that any positive integer wil
 | Number: | Step:                                                          | Command:                                          |
 | ------- | -------------------------------------------------------------- | ------------------------------------------------- |
 | 1       | Clone a repository                                             | `git clone https://github.com/Andrej123456789/3x` |
-| 2       | Enter the `3x` directory                                       | `cd 3x`                                           |
+| 2       | Enter the `src` directory                                      | `cd 3x\src`                                       |
 | 3       | Create the `build` directory and enter it                      | `mkdir build && cd build`                         |
 | 4       | Run CMake                                                      | `cmake .. -DGMP_ROOT="path_to_vcpkg"`             |
 | 5       | Open Visual Studio and build the solution                      |                                                   |
@@ -46,14 +46,14 @@ The Collatz conjecture (also known as 3x+1) states that any positive integer wil
 
 ### Linux
 
-| Number: | Step:                    | Command:                                          |
-| ------- | ------------------------ | ------------------------------------------------- |
-| 1       | Clone a repository       | `git clone https://github.com/Andrej123456789/3x` |
-| 2       | Enter the `3x` directory | `cd 3x`                                           |
-| 3       | Compile                  | `make`                                            |
-| 4       | Run the program          | `make run`                                        |
+| Number: | Step:                     | Command:                                          |
+| ------- | ------------------------- | ------------------------------------------------- |
+| 1       | Clone a repository        | `git clone https://github.com/Andrej123456789/3x` |
+| 2       | Enter the `src` directory | `cd 3x/src`                                       |
+| 3       | Compile                   | `make`                                            |
+| 4       | Run the program           | `make run`                                        |
 
-## Compile - Python version
+## Build & run instructions - Python version
 
 ## Installing dependencies
 
@@ -71,11 +71,11 @@ The Collatz conjecture (also known as 3x+1) states that any positive integer wil
 
 ## Running
 
-| Number: | Step:                    | Command:                                          |
-| ------- | ------------------------ | ------------------------------------------------- |
-| 1       | Clone a repository       | `git clone https://github.com/Andrej123456789/3x` |
-| 2       | Enter the `3x` directory | `cd 3x`                                           |
-| 3       | Run the program          | `python main.py` or `python3 main.py`             |
+| Number: | Step:                     | Command:                                          |
+| ------- | ------------------------- | ------------------------------------------------- |
+| 1       | Clone a repository        | `git clone https://github.com/Andrej123456789/3x` |
+| 2       | Enter the `src` directory | `cd 3x/src`                                       |
+| 3       | Run the program           | `python main.py` or `python3 main.py`             |
 
 ## Resources used
 
