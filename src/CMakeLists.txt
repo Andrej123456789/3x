@@ -4,7 +4,7 @@ set(CMAKE_BUILD_TYPE Release)
 
 project(3x)
 
-IF (MSVC)
+IF(MSVC)
     set(CMAKE_C_FLAGS "/W4 /permissive-")
 ELSE()
     set(CMAKE_C_FLAGS "-Wall -Wextra -Werror -pedantic")
